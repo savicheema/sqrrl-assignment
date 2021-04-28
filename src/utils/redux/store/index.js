@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import { filterReducer, spacexReducer } from "../reducers";
+import { filterReducer, spacexReducer, loaderReducer } from "../reducers";
 
 const initFilter = {
   year: null,
@@ -14,3 +14,9 @@ const initSpaceX = {
 };
 
 export const spacexStore = createStore(spacexReducer, initSpaceX);
+
+const initLoader = {
+  isLoader: false,
+};
+
+export const loaderStore = createStore(loaderReducer, initLoader);

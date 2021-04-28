@@ -17,3 +17,8 @@ export const setSpaceX = (spaceX) => ({
   type: "SET_SPACE_X",
   payload: spaceX,
 });
+
+export const setLoader = (isLoader) => ({
+  type: "SET_LOADER",
+  payload: isLoader,
+});

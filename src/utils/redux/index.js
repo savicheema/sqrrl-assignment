@@ -1,10 +1,11 @@
-import { filterReducer, spacexReducer } from "./reducers";
-import { filterStore, spacexStore } from "./store";
+import { filterReducer, spacexReducer, loaderReducer } from "./reducers";
+import { filterStore, spacexStore, loaderStore } from "./store";
 import {
   setFilterYear,
   setFilterLaunch,
   setFilterLanding,
   setSpaceX,
+  setLoader,
 } from "./actions";
 
 export {
@@ -16,4 +17,7 @@ export {
   spacexReducer,
   spacexStore,
   setSpaceX,
+  loaderReducer,
+  loaderStore,
+  setLoader,
 };

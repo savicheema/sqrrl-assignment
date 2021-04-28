@@ -31,3 +31,15 @@ export const spacexReducer = (state, action) => {
       return state;
   }
 };
+
+export const loaderReducer = (state, action) => {
+  switch (action.type) {
+    case "SET_LOADER":
+      return {
+        ...state,
+        isLoader: action.payload,
+      };
+    default:
+      return state;
+  }
+};

@@ -1,4 +1,4 @@
-import { filterStore } from "../utils/redux";
+import { filterStore, loaderStore, setLoader } from "../utils/redux";
 
 const apiUrl = new URL("https://api.spacexdata.com/v3/launches/");
 
@@ -15,14 +15,17 @@ export const filterCall = ({ year, launchSuccess, landingSuccess }) => {
   else apiUrl.searchParams.delete("land_success");
 
   return new Promise((resolve, reject) => {
+    loaderStore.dispatch(setLoader(true));
     fetch(apiUrl)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
+        loaderStore.dispatch(setLoader(false));
         resolve(data);
       })
       .catch((err) => {
+        loaderStore.dispatch(setLoader(false));
         reject(err);
       });
   });
