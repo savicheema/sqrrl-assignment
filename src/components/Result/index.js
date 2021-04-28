@@ -2,6 +2,7 @@ import React from "react";
 import "./result.css";
 
 import ResultCard from "./ResultCard";
+import Empty from "./Empty";
 import { filterCall } from "../../apis";
 
 import { filterStore, spacexStore, setSpaceX } from "../../utils/redux";
@@ -15,11 +16,13 @@ class Result extends React.Component {
 
     return (
       <div className="result">
-        {spaceX.length
-          ? spaceX.map((result, index) => {
-              return <ResultCard details={result} key={index} />;
-            })
-          : "No Results!"}
+        {spaceX.length ? (
+          spaceX.map((result, index) => {
+            return <ResultCard details={result} key={index} />;
+          })
+        ) : (
+          <Empty />
+        )}
       </div>
     );
   }
