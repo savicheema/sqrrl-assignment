@@ -1,4 +1,4 @@
-import { filterStore, loaderStore, setLoader } from "../utils/redux";
+import { loaderStore, setLoader } from "../utils/redux";
 
 const apiUrl = new URL("https://api.spacexdata.com/v3/launches/");
 

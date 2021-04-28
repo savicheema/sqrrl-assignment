@@ -27,14 +27,6 @@ class Result extends React.Component {
     );
   }
 
-  constructor(props) {
-    super(props);
-
-    // let results = [];
-
-    // this.state = { results };
-  }
-
   componentDidMount() {
     this.fetchStores();
 
