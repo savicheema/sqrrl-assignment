@@ -1,0 +1,35 @@
+.result-card {
+  /* height: 100px; */
+  background-color: white;
+
+  margin: var(--margin);
+
+  border-radius: 8px;
+  padding: var(--medium-padding);
+}
+
+.result-card:last-child {
+  margin-bottom: 100px;
+}
+
+.result-card figure {
+  margin: 0;
+}
+.result-card figure img {
+  padding: var(--minor-padding);
+  width: calc(100% - (2 * var(--minor-padding)));
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
+.result-card details ul {
+  padding: var(--medium-padding);
+}
+
+.result-card details ul li {
+  margin: calc(-1 * var(--minor-padding));
+  list-style-type: none;
+  margin-bottom: var(--medium-padding);
+  font-size: var(--font-small);
+  font-weight: bold;
+}

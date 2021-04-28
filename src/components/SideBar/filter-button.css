@@ -1,0 +1,9 @@
+.filter-button {
+  margin: var(--minor-padding);
+  background: none;
+  outline: none;
+  border: none;
+  background-color: var(--green-accent);
+  border-radius: 4px;
+  padding: var(--minor-padding);
+}

@@ -1,0 +1,21 @@
+.sidebar {
+  width: 20vw;
+  max-width: 480px;
+
+  background-color: white;
+
+  margin-right: var(--margin);
+
+  border-radius: 8px;
+
+  padding: var(--medium-padding);
+
+  max-height: 68vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar .title {
+  font-size: var(--font-medium);
+  font-weight: bold;
+}

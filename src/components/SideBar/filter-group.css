@@ -1,0 +1,17 @@
+.filter-group {
+  margin: var(--margin) 0;
+}
+
+.filter-group .title {
+  font-size: var(--font-small);
+  font-weight: normal;
+  padding: var(--minor-padding) 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.filter-group .filters {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: var(--minor-padding) 0;
+}
