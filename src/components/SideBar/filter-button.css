@@ -7,3 +7,22 @@
   border-radius: 4px;
   padding: var(--minor-padding);
 }
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--red-accent);
+}
+
+.filter-reset {
+  margin: var(--minor-padding) var(--medium-padding);
+  background: none;
+  outline: none;
+  border: none;
+  background-color: var(--red-accent);
+  border-radius: 4px;
+  color: white;
+  padding: var(--minor-padding);
+  width: 90%;
+
+  margin-bottom: 20px;
+}

@@ -4,16 +4,22 @@ import "./result.css";
 import ResultCard from "./ResultCard";
 import { filterCall } from "../../apis";
 
+import { filterStore, spacexStore, setSpaceX } from "../../utils/redux";
+
 class Result extends React.Component {
   render() {
-    let { results } = this.state;
-    console.log(" Result STATE", results);
+    // let { results } = this.state;
+    // console.log(" Result STATE", results);
+
+    const { spaceX } = spacexStore.getState();
 
     return (
       <div className="result">
-        {results.map((result, index) => {
-          return <ResultCard details={result} key={index} />;
-        })}
+        {spaceX.length
+          ? spaceX.map((result, index) => {
+              return <ResultCard details={result} key={index} />;
+            })
+          : "No Results!"}
       </div>
     );
   }
@@ -21,22 +27,28 @@ class Result extends React.Component {
   constructor(props) {
     super(props);
 
-    let results = [];
+    // let results = [];
 
-    this.state = { results };
+    // this.state = { results };
   }
 
   componentDidMount() {
-    filterCall({})
+    this.fetchStores();
+
+    filterStore.subscribe(this.fetchStores);
+  }
+  componentWillUnmount() {}
+
+  fetchStores = () => {
+    filterCall(filterStore.getState())
       .then((results) => {
-        // alert("success");
-        this.setState({ results });
+        console.log("SUCCESS");
+        spacexStore.dispatch(setSpaceX(results));
       })
       .catch((err) => {
         alert(err);
       });
-  }
-  componentWillUnmount() {}
+  };
 }
 
 export default Result;

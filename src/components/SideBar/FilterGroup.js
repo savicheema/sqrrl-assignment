@@ -11,6 +11,8 @@ const FilterGroup = ({ title, filters }) => (
         return (
           <FilterButton
             filterName={filter.filterName}
+            filterValue={filter.filterValue}
+            type={filter.type}
             action={() => {
               alert(`${filter.filterName}`);
             }}

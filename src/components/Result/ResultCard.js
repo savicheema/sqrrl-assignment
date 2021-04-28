@@ -21,7 +21,7 @@ const ResultCard = ({ details }) => {
           {details.mission_name} {`#${details.flight_number}`}
         </summary>
         <ul>
-          <li>{`Mission Ids: ${details.mission_id.join(" ")}`}</li>
+          <li>{`Mission Ids: ${details.mission_id.join(",")}`}</li>
           <li>{`Launch Year: ${details.launch_year}`}</li>
           <li>{`Successful Launch: ${details.launch_success}`}</li>
           <li>{`Successful Landing: ${landingSuccessText}`}</li>
