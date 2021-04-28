@@ -16,3 +16,18 @@
   display: flex;
   padding: var(--margin) var(--major-padding);
 }
+
+@media screen and (max-width: 520px) {
+  .App {
+    overflow: scroll;
+  }
+
+  .App header h1 {
+    padding: var(--margin);
+  }
+
+  .App main {
+    flex-direction: column;
+    padding: 0;
+  }
+}

@@ -18,3 +18,28 @@
   /* padding-bottom: -500px; */
   bottom: -500px;
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1240px) {
+  .result {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* STYLES GO HERE */
+  .result {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .result {
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .result {
+    margin-top: var(--margin);
+  }
+}

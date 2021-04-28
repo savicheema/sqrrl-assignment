@@ -6,6 +6,9 @@
 
   border-radius: 8px;
   padding: var(--medium-padding);
+
+  max-width: 240px;
+  min-width: 192px;
 }
 
 .result-card:last-child {
@@ -32,4 +35,11 @@
   margin-bottom: var(--medium-padding);
   font-size: var(--font-small);
   font-weight: bold;
+}
+
+@media only screen and (max-width: 520px) {
+  .result-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
